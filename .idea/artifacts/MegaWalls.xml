@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MegaWalls">
+    <output-path>G:/Megawalls/plugins</output-path>
+    <root id="archive" name="MegaWalls.jar">
+      <element id="module-output" name="MegaWalls" />
+      <element id="file-copy" path="F:/Client/Coreium/Megawalls/src/main/resources/config.yml" />
+      <element id="file-copy" path="F:/Client/Coreium/Megawalls/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,36 @@
+name: MegaWalls
+version: 4.7.1-SNAPSHOT
+main: cyan.thegoodboys.megawalls.MegaWalls
+author: TheGoodBoys
+depend: [ Citizens, HolographicDisplays,NoteBlockAPI,LuckPerms ]
+commands:
+  stage:
+  kill:
+  killwither:
+  surface:
+  master:
+  coins:
+  mythic:
+  dust:
+  team:
+  walls:
+  shout:
+  spawnpet:
+  class:
+  forcestart:
+    permission: MegaWalls.forcestart
+permissions:
+  MegaWalls.forcestart:
+    default: op
+  MegaWalls.coins:
+    default: op
+  MegaWalls.dust:
+    default: op
+  MegaWalls.hologrameffect.Default:
+    default: true
+  MegaWalls.killmessage.Default:
+    default: true
+  MegaWalls.admin:
+    default: op
+  MegaWalls.default:
+    default: true

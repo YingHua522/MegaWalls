@@ -1,0 +1,17 @@
+code: null
+lobby: lobby
+setup: false
+team-size: 25
+wither-health: 500
+server-name: TheGoodBoys
+min-Players: 2
+language: zh
+countdown:
+  lobby: 120
+database:
+  type: sqlite
+  ip: localhost
+  port: 3306
+  username: root
+  password: password
+  database: megawall
