@@ -331,11 +331,11 @@ public class TeamWither extends EntityWither implements IRangedEntity {
     @Override
     public void move(double d0, double d1, double d2) {
         // 如果玩家不在附近，那么就不执行任何操作
-        if (!this.world.isPlayerNearby(locX,locY,locZ,2.0) && this.passenger == null && this.vehicle == null && this.world.getCubes(this, this.getBoundingBox().grow(d0, d1, d2)).isEmpty()){
-            super.move(d0, d1, d2);
-        } else {
-            super.move(0,0,0);
-        }
+//        if (!this.world.isPlayerNearby(locX,locY,locZ,2.0) && this.passenger == null && this.vehicle == null && this.world.getCubes(this, this.getBoundingBox().grow(d0, d1, d2)).isEmpty()){
+//            super.move(d0, d1, d2);
+//        } else {
+//            super.move(0,0,0);
+//        }
     }
 
     protected void dropDeathLoot(boolean flag, int i) {
