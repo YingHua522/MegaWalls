@@ -519,8 +519,8 @@ public class PlayerListener extends BaseListener {
                 if (e.getItem().getType() == Material.SKULL_ITEM) {
                     e.setCancelled(true);
                     if (gamePlayer != null) {
-                        //皮肤
-                        //SkinMenu.createSkinSelectionMenu(ClassesManager.getSelected(gamePlayer), InventoryManager.CLASSESSELECTOR, gamePlayer).open(player);
+                        InventoryManager.SKINMENU.open(player);
+                        return;
                     }
                 }
                 if (e.getItem().getType() == Material.EMERALD) {

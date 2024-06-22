@@ -20,6 +20,7 @@ public class InventoryManager {
     public static SmartInventory TASKMENU = null;
     public static SmartInventory MUSICMENU = null;
     public static SmartInventory GAMEMENU = null;
+    public static SmartInventory SKINMENU = null;
 
     public static void registerAll() {
         SPECTATORSETTINGS = SpectatorInventory.buildSettings();
@@ -35,6 +36,7 @@ public class InventoryManager {
         EFFECTMENU_KILLMESSAGE = EffectMenu.buildKillMessage();
         TASKMENU = TaskMenu.build();
         MUSICMENU = MusicMenu.build();
+        SKINMENU = Skin.build();
         GAMEMENU = GameMenu.build();
     }
 }
