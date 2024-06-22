@@ -50,6 +50,7 @@ public class Zombie extends Classes {
         this.setThirdSkill(new ThirdSkill(this));
         this.setCollectSkill(new FourthSkill(this));
         this.setDefaultSkin("eyJ0aW1lc3RhbXAiOjE1NDkxMTMzOTk3OTIsInByb2ZpbGVJZCI6IjkxOGEwMjk1NTlkZDRjZTZiMTZmN2E1ZDUzZWZiNDEyIiwicHJvZmlsZU5hbWUiOiJCZWV2ZWxvcGVyIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYzQ4ODY1ZmRhZmU4NjA5MzkyMTgxNjcxMjIwZjlhNjFlYjljMWU2ZWU5YjQ3NDkzYzA4YjllYzE1Mjg0MGNmIn19fQ==", "HW1oBtR1Tcyb2XNf7VpeO2r6qsZ9hkSRmDzO3RwKgRd45q3ZnNxhMzC+wOf78IXygzRg791caKaOwSlGeZI7UdwbTr/0gMe4eEHNqnWFTmSUwgCB9z3Zm9HY3uNd8sprUHYPMwzgCHY1BLdSFYnTj/ox6kPZCfHRbPzCxXws1xDBkX7VyKZ8i4vdDxXTYRUxzlj7N1D2CgUz419WzLwwZKMDv6cfb6igaW4TsbidzKrwWarWoNk4ndSGWNsFgSvtIXCDhaerv43zlDDsJvtHsF8wMLJOA5/vPNwSrNuHltyMxiRtfppcsbjDFLrYxe2XQopt/DDDKytvLqkYDixU2vHzmIa6vRqxrhkcG54Mc17kq+kYrKaV9G09UwSDWUbzrujFoToF7mhEwAyMiioIoicU/dBBeCcUSsTy22VeNwDChuBpejNkR9zh51FeHwkiuEGExyQwB8j3FF6kP9oUBX2oJSp+l4G/ptomVsErprzsUDbXPy4wLwiq1yQoU2svBwWRwUmN5fx3bUjmshbfvMWOlMBT0APV5qDRIg39FDLAzzNR4mEnarecozDyZbJAbonTgOZAN/lLBhCnoyPBrdJC0fQ74abxDKdyfOVrP78HCrzQqFA00QqBGDNbV9z+dpHXgfG7bWba6N7loET1DO9uxPOPIxTTONXRDAKS1Qo=");
+        this.setPrestigeSkin("","");
         this.setEquipmentPackage(new EquipmentPackage(this) {
 
             @Override

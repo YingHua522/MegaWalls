@@ -51,6 +51,7 @@ public class HIM extends Classes {
         this.setThirdSkill(new ThirdSkill(this));
         this.setCollectSkill(new FourthSkill(this));
         this.setDefaultSkin("eyJ0aW1lc3RhbXAiOjE1MzMzNDI3NTE3MTksInByb2ZpbGVJZCI6IjU2Njc1YjIyMzJmMDRlZTA4OTE3OWU5YzkyMDZjZmU4IiwicHJvZmlsZU5hbWUiOiJUaGVJbmRyYSIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM2NWVkMjgyOWM4M2UxMTlhODBkZmIyMjIxNjQ0M2U4NzhlZjEwNjQ5YzRhMzU0Zjc0YmY0NWFkMDZiYzFhNyJ9fX0=", "gvRz+z/AM/p9iJeifKTCEjIVoQbQq0OHPstiFFdX9cE6uxw+C0X0JuwoxHVEUkvKlzPQJGVPLh5VSQY4NL3wCEkyOwoN3FDWIewjzhwtmyM4BlzbHDRT6C/4ICFw3azLZi6f7EkPNcL9O8yks+ebyLxXEgJEFSmY7nMsjdRuLOVu7X9UoSbKLwNR8Rua9LEKtdhpVcQx+rLD9T4VRZctfhunPDVnXfQTqvq4gC1lb6nQPIwSnVCdH5eY4bnOO1n/vV7enOO0mMgjtQLxFFM1OKoBRDxh70pNgAmVUxunUA1xrfG+pZF5HM6nMh1FDKD7NTNrZ7O4EWpawT2Q8+EVLgdcMYNMlIW1xb4pOMceDpaAlOw3LOfROGK6cz4OpevuXU3WaXb97cuq8B0SrlVJI7xnL3sgEzyf+1MIQ6O0NBo7SAa0vVXEVu+Y65bawZh0HYpwngkTkMJR8wulNQ2HcKzSClZKsqP7M/qneHCJ4lnQsGFXj5LEp1EkJZ7WGTcIo5L4Fo7hl0FiGtTdesBEBc/OQOB2dIZfOZFInRaTMALuaB3VrAg+atYtTeU9twl0qmrq/0L5FbszkTh6xqpnGmlNWuRx1yKuG8+lD3f0sejHIPXC/Akw3YQjWFUTs3e8h18zD6mtZxu4CKFc6hVsnMsGr0tEIa/eASkUGJSNy0s=");
+        this.setPrestigeSkin("","");
         this.setEquipmentPackage(new EquipmentPackage(this) {
             @Override
             public List<ItemStack> getEquipments(int level) {

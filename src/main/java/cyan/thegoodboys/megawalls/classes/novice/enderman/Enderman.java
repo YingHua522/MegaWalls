@@ -59,6 +59,7 @@ public class Enderman extends Classes {
         this.setThirdSkill(new ThirdSkill(this));
         this.setCollectSkill(new FourthSkill(this));
         this.setDefaultSkin("eyJ0aW1lc3RhbXAiOjE1NDkxNTU5OTY3MzEsInByb2ZpbGVJZCI6IjU2Njc1YjIyMzJmMDRlZTA4OTE3OWU5YzkyMDZjZmU4IiwicHJvZmlsZU5hbWUiOiJUaGVJbmRyYSIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ0ZGIyNzEwNmZhYTYwYzRhOWE0ZDNlMmE0MDVlOGM2ODYzNWJjYzZkNjViMDhjZDI5NzllNjA2MTNkNTMwMiJ9fX0=", "KTYuXTQQ63ew7EksUSwP5XEQtdUkZh7G8ZoX4mBh10fWX0OXJIURP0c7PxW7BiPfh3o5Fo5zSeUIEHcbW9tjvhxmGkjONviLkA13VehIGMIo5h5akdkhEajLJgxJyOJSlLxicFhOoEy4cVDZwmAgwQrqidyH8ipOw9Hm4RbL2mKRX3Q+oEwyc4eDetIGbLTsoeueUq88QvtfISK2f3vDftIN92mznZcP3/k/tT3Y/7CO2iGEmjpMADhrbgxCk7AgjdWhZoz43xTJED631j5JuQbnO7/eaiQXIqpBAWTWFhRX/m3b7W8znbmAemgG5LjfertqFQNseICMmvFzUjDUHbYZ82Nmvu+ii1KoIOhXGQG1mI7ri/oejdXCvg8kAfp0HrNE9GdzvPItqBDC7OCwNzLkOI7T75hXhyABppUdty52GJ2i0GHQl679Vhs5bRhnRjlyPCUvhFDrgLr4cZgXaWmaDiEJ5DjxAiJOV9UDvXOxovb1mQlhoTCytQVhXSeuKLsNlVpoWKgEPRIrDWlqUadpKtsL14+t0p9zg+69FCmpYF1nWLPxKCC3zmFU3ixr3PVIzrUJ5VOBlee7xBx7pVeIuodYKcKduQNLkHjoV8o/gtaj9Bc3ohjVgygcRazrtePmm/ZbOCtrUjyC+pFmDgnIZE0m2KkLkcEdawzB5Zo=");
+        this.setPrestigeSkin("","");
         this.setEquipmentPackage(new EquipmentPackage(this) {
 
             @Override

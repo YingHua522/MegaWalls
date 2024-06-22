@@ -51,6 +51,7 @@ public class Skeleton extends Classes {
         this.setThirdSkill(new ThirdSkill(this));
         this.setCollectSkill(new FourthSkill(this));
         this.setDefaultSkin("eyJ0aW1lc3RhbXAiOjE1NDkyMDIyNjExMTUsInByb2ZpbGVJZCI6ImUzYjQ0NWM4NDdmNTQ4ZmI4YzhmYTNmMWY3ZWZiYThlIiwicHJvZmlsZU5hbWUiOiJNaW5pRGlnZ2VyVGVzdCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzUxNmQwNDVlNzNlYmM1N2RhNDY2YTJmN2I0Mjg4MTU5MWI1OTkwMDEwNmEyOGY4ZmZhMGNiZGFhOGE5MTQ5In19fQ==", "UpX2geR+fVfuG5MTLf5ttJQVUJebckJSxtJk76l3iwtV3ceIPGhFqF1RPC27WY9UmZJmFZde3v8E1bw66Tt7Au5Ol4X/D2YC+tl1gxkLSJUNaG12O03x/od5uohux1OPtgof21UIVgyewh6C5OAVegmRHFnx7obeWyuTboymbIkwIsffkVx0sbzgNaFQkcrSVUQYa4OTZ5Bp4zLpDeRGG9XjlCmurnaGOPHJT8N298TD1qAHEHYAuMZQIEze4RHzux01DH8b8lVA0HW5mN7OS4QjGAMGeUhOLYKptCo2bkem+u0Rc6RxC2h2oPA1yUCf95hG8QUAy/b9qn2Y4B+EnUBwRZjJrojtX7n/QSThGlCegeASyZdehcrUnE5/xAcGhwQh68ympbVQmY4YmxzZfvGe2kxOI8fHFMmrkGQLFXwu+6ceeE9y09gjbujK3VM4hIvWYaBBfFWIX4VIJsrTVT1oIGmpV/jjZbcKXWAOFkG+j87hgqZjBXAPMJZ6uLJS5D/BBR83JjU5a8w0eX1pnMBXwTZae7hd27IQVEoePXnr9Zw4HNsxlpvU5Bclv7aR5mX1OtDH7LI6ktWlYw1v6+B7+X8iAG76zcYHQUQXyyWseZAeKu6KgbCLTCdFKcPH5/ksIRmfENQq/9hItRA3UZCdSgAUTWtV3U9xQkTWT+c=");
+        this.setPrestigeSkin("","");
         this.setEquipmentPackage(new EquipmentPackage(this) {
 
             @Override
