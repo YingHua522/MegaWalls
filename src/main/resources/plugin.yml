@@ -1,5 +1,5 @@
 name: MegaWalls
-version: 4.7.1-SNAPSHOT
+version: 4.9.0-SNAPSHOT
 main: cyan.thegoodboys.megawalls.MegaWalls
 author: TheGoodBoys
 depend: [ Citizens, HolographicDisplays,NoteBlockAPI,LuckPerms ]

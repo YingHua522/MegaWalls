@@ -43,10 +43,6 @@
  */
 package cyan.thegoodboys.megawalls.listener;
 
-import com.comphenix.protocol.PacketType;
-import com.comphenix.protocol.ProtocolLibrary;
-import com.comphenix.protocol.ProtocolManager;
-import com.comphenix.protocol.events.PacketContainer;
 import cyan.thegoodboys.megawalls.MegaWalls;
 import cyan.thegoodboys.megawalls.api.event.PlayerGameJoinEvent;
 import cyan.thegoodboys.megawalls.classes.Classes;
@@ -59,7 +55,6 @@ import cyan.thegoodboys.megawalls.classes.mythic.snowman.Snowman;
 import cyan.thegoodboys.megawalls.game.*;
 import cyan.thegoodboys.megawalls.inv.opener.SQL;
 import cyan.thegoodboys.megawalls.inventory.InventoryManager;
-import cyan.thegoodboys.megawalls.inventory.SkinMenu;
 import cyan.thegoodboys.megawalls.spectator.SpectatorSettings;
 import cyan.thegoodboys.megawalls.stats.CurrencyPackage;
 import cyan.thegoodboys.megawalls.stats.EffectStatsContainer;
@@ -85,13 +80,11 @@ import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.player.*;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.util.Vector;
 
 import java.util.*;
 
@@ -526,7 +519,8 @@ public class PlayerListener extends BaseListener {
                 if (e.getItem().getType() == Material.SKULL_ITEM) {
                     e.setCancelled(true);
                     if (gamePlayer != null) {
-                        SkinMenu.createSkinSelectionMenu(ClassesManager.getSelected(gamePlayer), InventoryManager.CLASSESSELECTOR, gamePlayer).open(player);
+                        //皮肤
+                        //SkinMenu.createSkinSelectionMenu(ClassesManager.getSelected(gamePlayer), InventoryManager.CLASSESSELECTOR, gamePlayer).open(player);
                     }
                 }
                 if (e.getItem().getType() == Material.EMERALD) {

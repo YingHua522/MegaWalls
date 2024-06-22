@@ -18,10 +18,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.Listener;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public abstract class Classes implements Listener, Runnable {
     private static final Map<GamePlayer, Integer> addingEnergy = new HashMap<>();
@@ -52,6 +49,7 @@ public abstract class Classes implements Listener, Runnable {
     private ClassesInfo.Difficulty difficulty;
     private EquipmentPackage equipmentPackage;
     private ClassesSkin defaultSkin;
+    private ClassesSkin prestigeSkin;
 
     public Classes(String name, String displayName, String ing, ChatColor nameColor, Material iconType, byte iconData, ClassesType classesType, ClassesInfo.Orientation[] orientations, ClassesInfo.Difficulty difficulty) {
         this.name = name;
@@ -176,8 +174,16 @@ public abstract class Classes implements Listener, Runnable {
         return this.defaultSkin;
     }
 
+    public ClassesSkin getPrestigeSkin() {
+        return prestigeSkin;
+    }
+
     public void setDefaultSkin(String value, String signature) {
-        this.defaultSkin = new ClassesSkin("Default", this.getDisplayName(), Collections.singletonList("§7" + this.getDisplayName() + "的默认皮肤"), value, signature, null);
+        this.defaultSkin = new ClassesSkin("Default", this.getDisplayName(), Collections.singletonList("§7" + this.getDisplayName() + "的默认皮肤"), value, signature);
+    }
+
+    public void setPrestigeSkin(String value, String signature) {
+        this.prestigeSkin = new ClassesSkin("Prestige", this.getDisplayName(), Collections.singletonList("§7" + this.getDisplayName() + "的精通皮肤"), value, signature);
     }
 }
 

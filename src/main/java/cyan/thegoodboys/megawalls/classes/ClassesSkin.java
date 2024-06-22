@@ -8,23 +8,17 @@ public class ClassesSkin {
     private final List<String> info;
     private final String value;
     private final String signature;
-    private String owner;
 
-    public ClassesSkin(String name, String displayName, List<String> info, String value, String signature, String onwer) {
+    public ClassesSkin(String name, String displayName, List<String> info, String value, String signature) {
         this.name = name;
         this.displayName = displayName;
         this.info = info;
         this.value = value;
         this.signature = signature;
-        this.owner = onwer;
     }
 
     public String getName() {
         return this.name;
-    }
-
-    public String getOwner() {
-        return this.owner;
     }
 
     public String getDisplayName() {

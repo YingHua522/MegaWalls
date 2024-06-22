@@ -20,9 +20,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommandHandler
-        implements CommandExecutor,
-        TabCompleter {
+public class CommandHandler implements CommandExecutor, TabCompleter {
     private final List<BaseCommand> commands = new ArrayList<>();
 
     public CommandHandler() {

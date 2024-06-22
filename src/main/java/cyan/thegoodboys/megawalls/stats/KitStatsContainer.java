@@ -45,6 +45,8 @@ public class KitStatsContainer {
     @Getter
     private int masterPoints;
     @Getter
+    private boolean PrestigeSkin;
+    @Getter
     private boolean enableGoldTag;
     @Getter
     private long playTime;
@@ -135,6 +137,11 @@ public class KitStatsContainer {
     public void giveMasterPoints(int amount) {
         this.masterPoints += amount;
         database.dbUpdate("classes_" + this.classes.getName(), new KeyValue("masterPoints", this.masterPoints), new KeyValue("uuid", this.gamePlayer.getUuid().toString()));
+    }
+
+    public void setPrestigeSkin(boolean PrestigeSkin) {
+        this.PrestigeSkin = PrestigeSkin;
+        database.dbUpdate("classes_" + this.classes.getName(), new KeyValue("PrestigeSkin", String.valueOf(PrestigeSkin)), new KeyValue("uuid", this.gamePlayer.getUuid().toString()));
     }
 
     public void takeMasterPoints(int amount) {
