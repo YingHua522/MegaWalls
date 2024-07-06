@@ -187,7 +187,7 @@ public class Arcane extends Classes {
     public void run() {
         GamePlayer.getOnlinePlayers().stream().filter(gamePlayer -> !gamePlayer.isSpectator() && ClassesManager.getSelected(gamePlayer).equals(this)).forEach(gamePlayer -> {
             if (skillCooldown.getOrDefault(gamePlayer, 0) > 0) {
-                skillCooldown.put((GamePlayer) gamePlayer, skillCooldown.get(gamePlayer) - 1);
+                skillCooldown.put(gamePlayer, skillCooldown.get(gamePlayer) - 1);
             }
             if (gamePlayer.getPlayer().hasPotionEffect(PotionEffectType.WITHER)) {
                 gamePlayer.getPlayer().removePotionEffect(PotionEffectType.WITHER);

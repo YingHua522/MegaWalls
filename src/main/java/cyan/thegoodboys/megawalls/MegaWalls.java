@@ -160,7 +160,6 @@ public class MegaWalls extends JavaPlugin {
             buf.writeUTF(this.getConfig().getString("lobby"));
             p.sendPluginMessage(this, "BungeeCord", buf.toByteArray());
         } catch (Exception exception) {
-            // empty catch block
         }
     }
 

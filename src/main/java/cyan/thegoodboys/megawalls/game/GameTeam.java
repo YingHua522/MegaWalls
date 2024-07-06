@@ -86,7 +86,6 @@ public class GameTeam {
             this.teamWither = new TeamWither(((CraftWorld) Bukkit.getWorld("world")).getHandle());
             this.teamWither.setTeam(this);
             double maxHealth = MegaWalls.getInstance().getConfig().getDouble("wither-health", 500.0D);
-            ((Wither) this.teamWither.getBukkitEntity()).setMaxHealth(maxHealth);
             ((Wither) this.teamWither.getBukkitEntity()).setHealth(maxHealth);
             EntityTypes.spawnEntity(this.teamWither, this.witherLocation);
 

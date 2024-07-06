@@ -94,6 +94,14 @@ public class TeamWither extends EntityWither implements IRangedEntity {
         return null;
     }
 
+    protected void initAttributes() {
+        super.initAttributes();
+        this.getAttributeInstance(GenericAttributes.maxHealth).setValue(1024.0);
+        this.getAttributeInstance(GenericAttributes.MOVEMENT_SPEED).setValue(0.6000000238418579);
+        this.getAttributeInstance(GenericAttributes.FOLLOW_RANGE).setValue(40.0);
+    }
+
+
     protected void E() {
         int i;
         int j1;
