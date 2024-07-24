@@ -72,7 +72,7 @@ extends Skill {
             lore.add("   \u00a77\u548c\u751f\u547d\u6062\u590dI\u6548\u679c,\u6301\u7eed\u00a7a" + this.getSeconds(level) + "\u00a77\u79d2\u3002");
             return lore;
         }
-        lore.add(" \u00a78\u25aa \u00a77\u51fb\u6740\u654c\u4eba\u65f6,\u83b7\u5f97\u00a78" + StringUtils.percent(this.getAttribute(level - 1)) + " \u279c \u00a7a" + StringUtils.percent(this.getAttribute(level)) + "\u00a77\u4f24\u5bb3\u52a0\u6210");
+        lore.add(" \u00a78\u25aa \u00a77\u51fb杀\u654c\u4eba\u65f6,\u83b7\u5f97\u00a78" + StringUtils.percent(this.getAttribute(level - 1)) + " \u279c \u00a7a" + StringUtils.percent(this.getAttribute(level)) + "\u00a77\u4f24\u5bb3\u52a0\u6210");
         lore.add("   \u00a77\u548c\u751f\u547d\u6062\u590dI\u6548\u679c,\u6301\u7eed\u00a78" + this.getSeconds(level - 1) + " \u279c \u00a7a" + this.getSeconds(level) + "\u00a77\u79d2\u3002");
         return lore;
     }

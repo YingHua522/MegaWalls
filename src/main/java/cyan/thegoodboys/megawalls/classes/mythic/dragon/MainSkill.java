@@ -76,7 +76,7 @@ extends Skill {
             return lore;
         }
         lore.add(" \u00a78\u25aa \u00a77\u4e00\u6b21\u53d1\u5c04\u4e09\u4e2a\u51cb\u96f6\u9ab7\u9ac5,");
-        lore.add("   \u00a77\u6bcf\u4e2a\u9020\u6210\u00a78" + this.getAttribute(level - 1) + " \u279c \u00a7a" + this.getAttribute(level) + "\u00a77\u70b9\u4f24\u5bb3\u3002");
+        lore.add("   \u00a77\u6bcf个\u9020\u6210\u00a78" + this.getAttribute(level - 1) + " \u279c \u00a7a" + this.getAttribute(level) + "\u00a77\u70b9\u4f24\u5bb3\u3002");
         return lore;
     }
 

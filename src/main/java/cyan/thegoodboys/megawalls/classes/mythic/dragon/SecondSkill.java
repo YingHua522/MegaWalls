@@ -56,7 +56,7 @@ extends Skill {
             return lore;
         }
         lore.add(" \u00a78\u25aa \u00a77\u653b\u51fb\u65f6\u6709\u00a78" + StringUtils.percent(this.getAttribute(level - 1)) + " \u279c \u00a7a" + StringUtils.percent(this.getAttribute(level)) + "\u00a77\u51e0\u7387\u6062\u590d3\u70b9\u9965\u997f\u503c");
-        lore.add("   \u00a77\u4ee5\u53ca2\u70b9\u751f\u547d\u3002");
+        lore.add("   \u00a77\u4ee5及2\u70b9\u751f\u547d\u3002");
         return lore;
     }
 

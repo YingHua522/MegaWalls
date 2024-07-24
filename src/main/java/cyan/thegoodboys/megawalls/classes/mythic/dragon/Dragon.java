@@ -66,9 +66,47 @@ extends Classes {
                 items.add(new ItemBuilder(Material.DIAMOND_PICKAXE).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Pickaxe").setUnbreakable(true).addEnchantment(Enchantment.DIG_SPEED, 3).addEnchantment(Enchantment.DURABILITY, 3).build());
                 items.add(new ItemBuilder(Material.ENDER_CHEST).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Ender Chest").build());
                 switch (level) {
+                    case 1: {
+                        items.add(new ItemBuilder(Material.IRON_SWORD).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
+                        items.add(new ItemBuilder(Material.BOW).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Bow").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.ARROW_DAMAGE, 2).build());
+                        items.add(new ItemBuilder(Material.IRON_HELMET).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1).build());
+                        items.add(new ItemBuilder(Material.GOLD_BOOTS).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_FALL, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3).build());
+                        items.add(new ItemBuilder(Material.COOKED_BEEF, 3).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Steak").build());
+                        items.add(new ItemBuilder(Material.POTION, 1, (byte) 5).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Potion of Heal (8\u2764)").addPotion(new PotionEffect(PotionEffectType.HEAL, 1, 2)).build());
+                        items.add(new ItemBuilder(Material.ARROW, 64).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Arrow").build());
+                    }
+                    case 2: {
+                        items.add(new ItemBuilder(Material.IRON_SWORD).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
+                        items.add(new ItemBuilder(Material.BOW).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Bow").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.ARROW_DAMAGE, 2).build());
+                        items.add(new ItemBuilder(Material.IRON_HELMET).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1).build());
+                        items.add(new ItemBuilder(Material.GOLD_BOOTS).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_FALL, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3).build());
+                        items.add(new ItemBuilder(Material.COOKED_BEEF, 3).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Steak").build());
+                        items.add(new ItemBuilder(Material.POTION, 2, (byte) 5).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Potion of Heal (8\u2764)").addPotion(new PotionEffect(PotionEffectType.HEAL, 1, 2)).build());
+                        items.add(new ItemBuilder(Material.ARROW, 64).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Arrow").build());
+                    }
+                    case 3: {
+                        items.add(new ItemBuilder(Material.IRON_SWORD).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
+                        items.add(new ItemBuilder(Material.BOW).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Bow").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.ARROW_DAMAGE, 2).build());
+                        items.add(new ItemBuilder(Material.DIAMOND_HELMET).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 1).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1).build());
+                        items.add(new ItemBuilder(Material.GOLD_BOOTS).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_FALL, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3).build());
+                        items.add(new ItemBuilder(Material.COOKED_BEEF, 3).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Steak").build());
+                        items.add(new ItemBuilder(Material.POTION, 2, (byte) 5).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Potion of Heal (8\u2764)").addPotion(new PotionEffect(PotionEffectType.HEAL, 1, 2)).build());
+                        items.add(new ItemBuilder(Material.POTION, 2, (byte) 2).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Potion of Speed II (0:15s)").addPotion(new PotionEffect(PotionEffectType.SPEED, 300, 1)).build());
+                        items.add(new ItemBuilder(Material.ARROW, 64).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Arrow").build());
+                    }
+                    case 4: {
+                        items.add(new ItemBuilder(Material.IRON_SWORD).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
+                        items.add(new ItemBuilder(Material.BOW).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Bow").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.ARROW_DAMAGE, 1).build());
+                        items.add(new ItemBuilder(Material.DIAMOND_HELMET).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1).build());
+                        items.add(new ItemBuilder(Material.GOLD_BOOTS).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_FALL, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3).build());
+                        items.add(new ItemBuilder(Material.COOKED_BEEF, 3).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Steak").build());
+                        items.add(new ItemBuilder(Material.POTION, 2, (byte) 5).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Potion of Heal (8\u2764)").addPotion(new PotionEffect(PotionEffectType.HEAL, 1, 2)).build());
+                        items.add(new ItemBuilder(Material.POTION, 2, (byte) 2).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Potion of Speed II (0:15s)").addPotion(new PotionEffect(PotionEffectType.SPEED, 300, 1)).build());
+                        items.add(new ItemBuilder(Material.ARROW, 64).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Arrow").build());
+                    }
                     case 5: {
                         items.add(new ItemBuilder(Material.IRON_SWORD).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
-                        items.add(new ItemBuilder(Material.BOW).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Bow").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.ARROW_DAMAGE, 2).addEnchantment(Enchantment.DAMAGE_ALL, 1).build());
+                        items.add(new ItemBuilder(Material.BOW).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Bow").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.ARROW_DAMAGE, 2).build());
                         items.add(new ItemBuilder(Material.DIAMOND_HELMET).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1).build());
                         items.add(new ItemBuilder(Material.GOLD_BOOTS).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Helmet").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_FIRE, 2).addEnchantment(Enchantment.PROTECTION_FALL, 2).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3).build());
                         items.add(new ItemBuilder(Material.COOKED_BEEF, 3).setDisplayName(Dragon.this.nameColor + Dragon.this.getDisplayName() + " Steak").build());
@@ -141,7 +179,7 @@ extends Classes {
     @Override
     public List<String> getInfo() {
         ArrayList<String> lore = new ArrayList<String>();
-        lore.add("\u00a77\u4f60\u559c\u6b22\u8fd1\u6218\u4e0e\u8fdc\u7a0b\u7684\u6df7\u5408.");
+        lore.add("\u00a77\u4f60\u559c欢\u8fd1\u6218\u4e0e\u8fdc\u7a0b\u7684\u6df7\u5408.");
         lore.add("\u00a77\u4f60\u662f\u65b9\u5757\u6316\u6398\u9ad8\u624b.");
         lore.add("\u00a77\u4f60\u662f\u4e00\u540d\u6cd5\u5e08.");
         return lore;

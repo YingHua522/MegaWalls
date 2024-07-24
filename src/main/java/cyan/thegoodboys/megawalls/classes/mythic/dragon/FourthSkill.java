@@ -70,7 +70,7 @@ extends CollectSkill {
     public List<String> getInfo(int level) {
         ArrayList<String> lore = new ArrayList<String>();
         if (level == 1) {
-            lore.add(" \u00a78\u25aa \u00a77\u6316\u77ff\u65f6\u6709\u00a7a" + StringUtils.percent(this.getAttribute(level)) + "\u51e0\u7387\u6389\u843d\u94c1\u952d,");
+            lore.add(" \u00a78\u25aa \u00a77\u6316\u77ff时\u6709\u00a7a" + StringUtils.percent(this.getAttribute(level)) + "\u51e0\u7387\u6389\u843d\u94c1\u952d,");
             lore.add("    \u00a77\u6316\u4efb\u4f55\u77ff\u7269\u90fd\u6709\u00a7a" + StringUtils.percent(this.getChestplate(level)) + "\u00a77\u51e0\u7387");
             lore.add("    \u00a77\u6389\u843d\u4e00\u4ef6\u94c1\u62a4\u7532\u3002");
             return lore;
