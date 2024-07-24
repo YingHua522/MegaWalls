@@ -119,7 +119,6 @@ public class ClassesManager {
         ClassesManager.registerClasses(new Assassin());
         ClassesManager.registerClasses(new OldSpider());
         ClassesManager.registerClasses(new Dragon());
-        //ClassesManager.registerClasses(new Random());
         registered = true;
     }
 
