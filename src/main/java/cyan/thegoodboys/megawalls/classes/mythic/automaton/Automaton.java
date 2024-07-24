@@ -76,7 +76,7 @@ public class Automaton extends Classes {
                         break;
                     }
                     case 3: {
-                        items.add(new ItemBuilder(Material.DIAMOND_SWORD).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
+                        items.add(new ItemBuilder(Material.IRON_SWORD).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
                         items.add(new ItemBuilder(Material.IRON_CHESTPLATE).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Chestplate").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1).build());
                         items.add(new ItemBuilder(Material.COOKED_BEEF, 2).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Steak").build());
                         items.add(new ItemBuilder(Material.POTION, 1, (byte) 5).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Potion of Heal (8\u2764)").addPotion(new PotionEffect(PotionEffectType.HEAL, 1, 2)).build());
@@ -84,7 +84,7 @@ public class Automaton extends Classes {
                         break;
                     }
                     case 4: {
-                        items.add(new ItemBuilder(Material.DIAMOND_SWORD).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
+                        items.add(new ItemBuilder(Material.IRON_SWORD).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Sword").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).build());
                         items.add(new ItemBuilder(Material.IRON_CHESTPLATE).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Chestplate").setUnbreakable(true).addEnchantment(Enchantment.DURABILITY, 10).addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2).build());
                         items.add(new ItemBuilder(Material.COOKED_BEEF, 3).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Steak").build());
                         items.add(new ItemBuilder(Material.POTION, 2, (byte) 5).setDisplayName(Automaton.this.nameColor + Automaton.this.getDisplayName() + " Potion of Heal (8\u2764)").addPotion(new PotionEffect(PotionEffectType.HEAL, 1, 2)).build());

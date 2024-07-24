@@ -57,6 +57,7 @@ extends Classes {
         this.setThirdSkill(new ThirdSkill(this));
         this.setCollectSkill(new FourthSkill(this));
         this.setDefaultSkin("7","");
+        this.setPrestigeSkin("","");
         this.setEquipmentPackage(new EquipmentPackage(this){
 
             @Override

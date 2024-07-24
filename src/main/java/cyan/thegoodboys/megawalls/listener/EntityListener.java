@@ -364,10 +364,5 @@ public class EntityListener extends BaseListener {
             event.setCancelled(true);
         }
     }
-
-    @EventHandler
-    public void onChunkUnload(ChunkUnloadEvent e) {
-        e.setCancelled(true);
-    }
 }
 

@@ -145,7 +145,6 @@ public class MainSkill extends Skill {
                 Location loc = player.getLocation();
                 Vector direction = loc.getDirection().normalize();
                 Vector wingVector = new Vector(-direction.getZ(), 0.0D, direction.getX()).normalize();
-
                 for (double y = 0; y <= 2; y += 0.2) {
                     double x = 0.5 * (4 * Math.pow(y, 2));
                     drawParticle(loc.clone().add(wingVector.clone().multiply(x)), loc.clone().add(wingVector.clone().multiply(-x)));

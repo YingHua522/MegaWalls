@@ -46,8 +46,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 import skinsrestorer.bukkit.SkinsRestorer;
-import skinsrestorer.shared.exception.SkinRequestException;
-import skinsrestorer.shared.interfaces.ISkinsRestorerAPI;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

@@ -60,7 +60,8 @@
             <groupId>com</groupId>
             <artifactId>skinsrestorer</artifactId>
             <version>13.7.5-SNAPSHOT</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/SkinsRestorer.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>sb</groupId>

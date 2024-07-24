@@ -148,7 +148,6 @@ public class PlayerListener extends BaseListener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerJoin(PlayerJoinEvent e) {
         e.setJoinMessage(null);
-        SQL.Register();
         Bukkit.getPluginManager().callEvent(new PlayerGameJoinEvent(game));
         final Player player = e.getPlayer();
         final GamePlayer gamePlayer = GamePlayer.create(player.getUniqueId());
@@ -483,7 +482,7 @@ public class PlayerListener extends BaseListener {
         Player player = e.getPlayer();
         GamePlayer gamePlayer = GamePlayer.get(player.getUniqueId());
         if (e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (gamePlayer != null && gamePlayer.isSpectator()) {
+            if (gamePlayer.isSpectator()) {
                 e.setCancelled(true);
                 ItemStack item = player.getItemInHand();
                 if (item == null || item.getType() == Material.AIR) {
@@ -591,7 +590,7 @@ public class PlayerListener extends BaseListener {
                         }
                         return;
                     }
-                    if (gamePlayer != null && !gamePlayer.isProtectedBlock(block)) {
+                    if (!gamePlayer.isProtectedBlock(block)) {
                         e.setCancelled(true);
                         gamePlayer.sendMessage("§cYou can't use this " + (block.getType() == Material.TRAPPED_CHEST ? "Trapped Chest" : "Chest") + "！");
                         return;
@@ -606,15 +605,13 @@ public class PlayerListener extends BaseListener {
                 }
                 if (e.getItem().getType() == Material.ENDER_CHEST) {
                     e.setCancelled(true);
-                    if (gamePlayer != null) {
                         player.openInventory(gamePlayer.getEnderChest());
                         gamePlayer.playSound(Sound.ENDERMAN_TELEPORT,2f,0.5f);
                         gamePlayer.playSound(Sound.CHEST_OPEN, 2f, 0.5f);
-                    }
                     return;
                 } else if ((e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR) && ItemUtils.isSword(item)) {
                     Classes classes;
-                    if (gamePlayer != null && gamePlayer.getEnergy() >= (ClassesManager.getSelected(gamePlayer) instanceof Snowman ? 60 : 100) && (classes = ClassesManager.getSelected(gamePlayer)).getMainSkill().use(gamePlayer, gamePlayer.getPlayerStats().getKitStats(classes))) {
+                    if (gamePlayer.getEnergy() >= (ClassesManager.getSelected(gamePlayer) instanceof Snowman ? 60 : 100) && (classes = ClassesManager.getSelected(gamePlayer)).getMainSkill().use(gamePlayer, gamePlayer.getPlayerStats().getKitStats(classes))) {
                         e.setCancelled(true);
                         gamePlayer.setEnergy((ClassesManager.getSelected(gamePlayer) instanceof Automaton ? gamePlayer.getEnergy() - 100 : ClassesManager.getSelected(gamePlayer) instanceof Snowman ? gamePlayer.getEnergy() - 60 : 0));
                         gamePlayer.sendActionBar(classes.getSkillTip(gamePlayer));
@@ -625,10 +622,10 @@ public class PlayerListener extends BaseListener {
                     }
                 } else if ((e.getAction() == Action.LEFT_CLICK_AIR) && e.getItem().getType() == Material.BOW) {
                     Classes classes;
-                    if (gamePlayer != null && ((ClassesManager.getSelected(gamePlayer) instanceof Phoenix || (ClassesManager.getSelected(gamePlayer) instanceof Lawless)) || (ClassesManager.getSelected(gamePlayer) instanceof Snowman))) {
+                    if ( ((ClassesManager.getSelected(gamePlayer) instanceof Phoenix || (ClassesManager.getSelected(gamePlayer) instanceof Lawless)) || (ClassesManager.getSelected(gamePlayer) instanceof Snowman))) {
                         return;
                     }
-                    if (gamePlayer != null && gamePlayer.getEnergy() >= 100 && (classes = ClassesManager.getSelected(gamePlayer)).getMainSkill().use(gamePlayer, gamePlayer.getPlayerStats().getKitStats(classes))) {
+                    if ( gamePlayer.getEnergy() >= 100 && (classes = ClassesManager.getSelected(gamePlayer)).getMainSkill().use(gamePlayer, gamePlayer.getPlayerStats().getKitStats(classes))) {
                         e.setCancelled(true);
                         gamePlayer.setEnergy(ClassesManager.getSelected(gamePlayer) instanceof Automaton ? gamePlayer.getEnergy() - 100 : 0);
                         gamePlayer.sendActionBar(classes.getSkillTip(gamePlayer));
@@ -652,23 +649,19 @@ public class PlayerListener extends BaseListener {
                 }
                 if (e.getItem().getType() == Material.COMPASS) {
                     if (e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR) {
-                        if (gamePlayer != null) {
                             gamePlayer.getPlayerCompass().next();
-                        }
                         e.setCancelled(true);
                         return;
                     }
                     if (e.getAction() == Action.LEFT_CLICK_BLOCK || e.getAction() == Action.LEFT_CLICK_AIR) {
                         e.setCancelled(true);
-                        if (gamePlayer != null) {
                             gamePlayer.getPlayerCompass().previous();
-                        }
                         return;
                     }
                 }
             }
         }
-        if (gamePlayer != null && gamePlayer.isSpectator()) {
+        if (gamePlayer.isSpectator()) {
             e.setCancelled(true);
         }
     }

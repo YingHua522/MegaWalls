@@ -142,7 +142,6 @@ public class Game {
         if (!this.isWaiting()) {
             return;
         }
-        SQL.Register();
         Bukkit.getServer().getPluginManager().callEvent(new GameStartEvent(this));
         this.setState(GameState.INGAME);
         this.moveFreePlayersToTeam();

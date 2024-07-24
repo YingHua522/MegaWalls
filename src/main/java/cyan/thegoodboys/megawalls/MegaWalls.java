@@ -166,7 +166,6 @@ public class MegaWalls extends JavaPlugin {
     public void onEnable() {
         instance = this;
         this.config = new FileConfig(this);
-        SQL.Register();
         ClassesMessage classesMessage = new ClassesMessage();
         classesMessage.onStart();
         Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "MegaWalls 启动成功！作者: TheGoodBoys 二次开发！");

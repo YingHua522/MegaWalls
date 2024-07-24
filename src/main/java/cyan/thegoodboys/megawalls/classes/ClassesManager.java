@@ -91,7 +91,6 @@ public class ClassesManager {
         if (registered) {
             return;
         }
-        SQL.Register();
         // 注册所有类
         ClassesManager.registerClasses(new Cow());
         ClassesManager.registerClasses(new Skeleton());

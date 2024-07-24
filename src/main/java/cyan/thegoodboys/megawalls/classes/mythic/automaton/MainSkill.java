@@ -118,7 +118,7 @@ public class MainSkill extends Skill {
         if (level == 1) {
             lore.add(" \u00a78\u25aa \u00a77\u83b7\u5f975\u79d2\u6297\u6027\u63d0\u5347I\u6548\u679c\u3002");
             lore.add("   \u00a77\u5468\u56f4\u7684\u73a9\u5bb6\u5c06\u53d7\u5230");
-            lore.add("   \u00a77\u706b\u7130\u65cb\u6da1\u7684\u5f71\u54cd,\u6301\u7eed5\u79d2");
+            lore.add("   \u00a77火焰旋涡\u7684\u5f71\u54cd,\u6301\u7eed5\u79d2");
             lore.add("   \u00a77\u9020\u6210\u6700\u591a\u00a7a" + this.getAttribute(level) + "\u00a77\u70b9\u4f24\u5bb3");
             return lore;
         }

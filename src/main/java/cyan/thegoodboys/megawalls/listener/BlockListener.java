@@ -56,12 +56,12 @@ public class BlockListener extends BaseListener {
             e.setCancelled(true);
             return;
         }
-        if (this.game.isStarted() && gamePlayer != null && !gamePlayer.isSpectator() && this.game.getStageManager().currentStage() instanceof ProtectStage) {
+        if (this.game.isStarted()  && !gamePlayer.isSpectator() && this.game.getStageManager().currentStage() instanceof ProtectStage) {
             e.setCancelled(true);
             gamePlayer.sendMessage("§c现在不能破坏方块！");
             return;
         }
-        if (gamePlayer != null && !gamePlayer.isSpectator() && this.game.isStarted() && !(this.game.getStageManager().currentStage() instanceof ProtectStage)) {
+        if ( !gamePlayer.isSpectator() && this.game.isStarted() && !(this.game.getStageManager().currentStage() instanceof ProtectStage)) {
             if (this.game.isProtected(e.getBlock().getLocation())) {
                 e.setCancelled(true);
                 gamePlayer.sendMessage("§c你不可以修改你的城堡！");
@@ -195,16 +195,16 @@ public class BlockListener extends BaseListener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onBlockPlace(BlockPlaceEvent e) {
         GamePlayer gamePlayer = GamePlayer.get(e.getPlayer().getUniqueId());
-        if (gamePlayer != null && (gamePlayer.isSpectator() || !this.game.isStarted())) {
+        if ( (gamePlayer.isSpectator() || !this.game.isStarted())) {
             e.setCancelled(true);
             return;
         }
-        if (gamePlayer != null && gamePlayer.getGameTeam().getTeamRegion().isInRegion(e.getBlock().getLocation()) && !gamePlayer.getGameTeam().getTeamWither().getBukkitEntity().isDead()) {
+        if ( gamePlayer.getGameTeam().getTeamRegion().isInRegion(e.getBlock().getLocation()) && !gamePlayer.getGameTeam().getTeamWither().getBukkitEntity().isDead()) {
             e.setCancelled(true);
             e.setBuild(false);
             gamePlayer.sendMessage("§c你不可以修改你的出生点！");
         }
-        if (gamePlayer != null && this.game.isProtected(e.getBlock().getLocation())) {
+        if ( this.game.isProtected(e.getBlock().getLocation())) {
             e.setCancelled(true);
             e.setBuild(false);
             gamePlayer.sendMessage("§c你不可以修改你的城堡！");
@@ -218,33 +218,24 @@ public class BlockListener extends BaseListener {
             if (e.getBlock().getType() == Material.TNT) {
                 e.setCancelled(true);
                 e.setBuild(false);
-                if (gamePlayer != null) {
                     gamePlayer.sendMessage("§c你不能在巨墙倒塌前放置TNT！");
                     return;
-                }
-                return;
+
             }
             if (e.getBlock().getType() == Material.IRON_BLOCK) {
                 e.setCancelled(true);
                 e.setBuild(false);
-                if (gamePlayer != null) {
                     gamePlayer.sendMessage("§c你不能在巨墙倒塌放置此物品！");
                     return;
-                }
-                return;
             }
         }
         if (e.getBlock().getType()== Material.ANVIL || e.getBlock().getType() == Material.ENCHANTMENT_TABLE) {
             e.setCancelled(true);
             e.setBuild(false);
-            if (gamePlayer != null) {
                 gamePlayer.sendMessage("§c你不能放置此物品！");
-                return;
-            }
             return;
         }
         Block block = e.getBlock();
-        if (gamePlayer != null) {
             Classes classes = ClassesManager.getSelected(gamePlayer);
             if (block.getType() == Material.PUMPKIN && block.getLocation().add(0, -1, 0).getBlock().getType() == Material.SNOW_BLOCK && block.getLocation().add(0, -2, 0).getBlock().getType() == Material.SNOW_BLOCK && Snowman.snowman.getOrDefault(gamePlayer, 0) < 4) {
                 if (classes instanceof Snowman) {
@@ -272,7 +263,7 @@ public class BlockListener extends BaseListener {
                     }.runTaskLater(MegaWalls.getInstance(), 300L);
                 }
             }
-        }
+
         if (!this.game.isWallsFall()) {
             for (BlockFace face : BlockFace.values()) {
                 Block relativeBlock = block.getRelative(face);
@@ -280,24 +271,20 @@ public class BlockListener extends BaseListener {
                     continue;
                 e.setCancelled(true);
                 e.setBuild(false);
-                if (gamePlayer != null) {
                     gamePlayer.sendMessage("§c你不能在受保护的方块附近一格内摆放其他方块！");
-                }
+
                 return;
             }
             if (block.getType() == Material.FURNACE || block.getType() == Material.TRAPPED_CHEST) {
-                if (gamePlayer != null) {
+
                     gamePlayer.addProtectedBlock(block);
-                }
+
                 if (block.getType() == Material.TRAPPED_CHEST) {
-                    if (gamePlayer != null) {
                         gamePlayer.sendMessage("§a你的§e陷阱箱§a已被保护！");
-                    }
                 }
                 if (block.getType() == Material.FURNACE) {
-                    if (gamePlayer != null) {
                         gamePlayer.sendMessage("§a你的§e熔炉§a已被保护！");
-                    }
+
                 }
             }
         }
