@@ -292,25 +292,21 @@ public class GamePlayer {
                 continue;
             livingEntity.setTarget(null);
         }
-        Bukkit.getScheduler().runTaskLater((Plugin) MegaWalls.getInstance(), new Runnable() {
-
-            @Override
-            public void run() {
-                player.getInventory().setArmorContents(null);
-                player.getInventory().clear();
-                player.getInventory().setItem(0, new ItemBuilder(Material.COMPASS).setDisplayName("§a§lTeleporter §7(Right Click)").build());
-                player.getInventory().setItem(4, new ItemBuilder(Material.DIODE).setDisplayName("§b§lSpectator Settings §7(Right Click)").build());
-                player.getInventory().setItem(8, new ItemBuilder(Material.BED).setDisplayName("§c§lLeave Game§7(Right Click)").build());
-                for (GamePlayer gamePlayer : GamePlayer.getSpectators()) {
-                    if (!gamePlayer.isOnline()) {
-                        return;
-                    }
-                    Player player1 = gamePlayer.getPlayer();
-                    SidebarBoard b = SidebarBoard.of(MegaWalls.getInstance(), player1);
-                    player1.setScoreboard(b.getScoreboard());
-                    ScoreBoardTimer.scoreboards.put(gamePlayer, b);
-                    MegaWalls.getInstance().getGame().registerScoreboardTeams(player1);
+        Bukkit.getScheduler().runTaskLater(MegaWalls.getInstance(), () -> {
+            player.getInventory().setArmorContents(null);
+            player.getInventory().clear();
+            player.getInventory().setItem(0, new ItemBuilder(Material.COMPASS).setDisplayName("§a§lTeleporter §7(Right Click)").build());
+            player.getInventory().setItem(4, new ItemBuilder(Material.DIODE).setDisplayName("§b§lSpectator Settings §7(Right Click)").build());
+            player.getInventory().setItem(8, new ItemBuilder(Material.BED).setDisplayName("§c§lLeave Game§7(Right Click)").build());
+            for (GamePlayer gamePlayer : GamePlayer.getSpectators()) {
+                if (!gamePlayer.isOnline()) {
+                    return;
                 }
+                Player player1 = gamePlayer.getPlayer();
+                SidebarBoard b = SidebarBoard.of(MegaWalls.getInstance(), player1);
+                player1.setScoreboard(b.getScoreboard());
+                ScoreBoardTimer.scoreboards.put(gamePlayer, b);
+                MegaWalls.getInstance().getGame().registerScoreboardTeams(player1);
             }
         }, 15L);
         for (PotionEffect effect : player.getActivePotionEffects()) {

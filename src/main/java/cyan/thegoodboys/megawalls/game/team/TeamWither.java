@@ -5,12 +5,10 @@ import cyan.thegoodboys.megawalls.game.Game;
 import cyan.thegoodboys.megawalls.game.GamePlayer;
 import cyan.thegoodboys.megawalls.game.GameTeam;
 import cyan.thegoodboys.megawalls.game.stage.BattleStage;
-import cyan.thegoodboys.megawalls.game.team.Goal.*;
 import cyan.thegoodboys.megawalls.reward.RewardManager;
 import cyan.thegoodboys.megawalls.stats.CurrencyPackage;
 import cyan.thegoodboys.megawalls.stats.EffectStatsContainer;
 import cyan.thegoodboys.megawalls.util.PlayerUtils;
-import cyan.thegoodboys.megawalls.util.WitherUtils;
 import lombok.Getter;
 import net.citizensnpcs.api.CitizensAPI;
 import net.minecraft.server.v1_8_R3.*;
@@ -45,12 +43,7 @@ public class TeamWither extends EntityWither implements IRangedEntity {
 
     public TeamWither(World world) {
         super(world);
-        WitherUtils.removeAllGoals(this);
         this.a(0.9F, 4.0F);
-        this.goalSelector.a(0, new PathfinderGoalFloats(this));
-        this.goalSelector.a(1, new PathfinderGoalArrowAttacks(this, 1.0, 40, 40));
-        this.goalSelector.a(2, new PathfinderGoalLookAtPlayers(this, EntityHuman.class, 8.0F));
-        this.goalSelector.a(3, new PathfinderGoalRandomLookarounds(this));
         this.maxNoDamageTicks = 11;
         this.noDamageTicks = 11;
     }
