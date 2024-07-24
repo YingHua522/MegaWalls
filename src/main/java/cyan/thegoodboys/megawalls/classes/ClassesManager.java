@@ -18,6 +18,7 @@ import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 import cyan.thegoodboys.megawalls.MegaWalls;
 import cyan.thegoodboys.megawalls.classes.mythic.assassin.Assassin;
 import cyan.thegoodboys.megawalls.classes.mythic.automaton.Automaton;
+import cyan.thegoodboys.megawalls.classes.mythic.dragon.Dragon;
 import cyan.thegoodboys.megawalls.classes.mythic.lawless.Lawless;
 import cyan.thegoodboys.megawalls.classes.mythic.mole.Mole;
 import cyan.thegoodboys.megawalls.classes.mythic.phoenix.Phoenix;
@@ -117,6 +118,7 @@ public class ClassesManager {
         ClassesManager.registerClasses(new Automaton());
         ClassesManager.registerClasses(new Assassin());
         ClassesManager.registerClasses(new OldSpider());
+        ClassesManager.registerClasses(new Dragon());
         //ClassesManager.registerClasses(new Random());
         registered = true;
     }
