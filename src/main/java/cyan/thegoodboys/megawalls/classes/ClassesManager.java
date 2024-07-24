@@ -153,15 +153,11 @@ public class ClassesManager {
     }
 
     public static List<Classes> sort(List<Classes> list) {
-        Collections.sort(list, new Comparator<Classes>() {
-
-            @Override
-            public int compare(Classes classes1, Classes classes2) {
-                if (classes1.getClassesType() == classes2.getClassesType()) {
-                    return classes1.getDifficulty().getPriority() - classes2.getDifficulty().getPriority();
-                }
-                return classes1.getClassesType().getPriority() - classes2.getClassesType().getPriority();
+        Collections.sort(list, (classes1, classes2) -> {
+            if (classes1.getClassesType() == classes2.getClassesType()) {
+                return classes1.getDifficulty().getPriority() - classes2.getDifficulty().getPriority();
             }
+            return classes1.getClassesType().getPriority() - classes2.getClassesType().getPriority();
         });
         return list;
     }
