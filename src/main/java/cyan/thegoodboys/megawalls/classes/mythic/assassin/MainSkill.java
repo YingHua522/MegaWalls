@@ -16,6 +16,7 @@ import cyan.thegoodboys.megawalls.classes.Skill;
 import cyan.thegoodboys.megawalls.game.Game;
 import cyan.thegoodboys.megawalls.game.GamePlayer;
 import cyan.thegoodboys.megawalls.stats.KitStatsContainer;
+import cyan.thegoodboys.megawalls.util.PlayerUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -112,6 +113,9 @@ public class MainSkill extends Skill {
                     Assassin.AssassinNameTag.remove(gamePlayer);
                     Bukkit.getScheduler().runTaskLater(MegaWalls.getInstance(), game::registerScoreboardTeams, 30L);
                     player.getWorld().playSound(player.getLocation(), Sound.BURP, 0.2f, 1.0f);
+                    for (GamePlayer online : GamePlayer.getOnlinePlayers()) {
+                        PlayerUtils.hideArmor(gamePlayer.getPlayer(), online.getPlayer());
+                    }
                     this.cancel();
                 }
             }

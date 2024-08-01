@@ -24,6 +24,7 @@ import cyan.thegoodboys.megawalls.MegaWalls;
 import cyan.thegoodboys.megawalls.api.event.GameStartEvent;
 import cyan.thegoodboys.megawalls.classes.Classes;
 import cyan.thegoodboys.megawalls.classes.ClassesManager;
+import cyan.thegoodboys.megawalls.classes.mythic.assassin.Assassin;
 import cyan.thegoodboys.megawalls.config.FileConfig;
 import cyan.thegoodboys.megawalls.game.stage.StageManager;
 import cyan.thegoodboys.megawalls.game.team.TeamColor;
@@ -261,7 +262,9 @@ public class Game {
                 gameTeam = gamePlayer.getGameTeam();
             }
             String name = (gameTeam != null ? gameTeam.getTeamColor().getText() : "S") + player1.getName();
-            if (player.getScoreboard().getTeam(name) != null) continue;
+            if (player.getScoreboard().getTeam(name) != null) {
+                player.getScoreboard().getTeam(name).unregister();
+            }
             Team team = player.getScoreboard().registerNewTeam(name);
             Classes classes = null;
             if (gamePlayer != null) {
@@ -314,6 +317,11 @@ public class Game {
                 team.setPrefix(effectStats.getColor(gamePlayer.getGameTeam().getTeamColor()).getChatColor() + (effectStats.isEnablePrefix() ? gamePlayer.getGameTeam().getTeamColor().getText() : "") + " " + (effectStats.isEnableBold() ? effectStats.getColor(gamePlayer.getGameTeam().getTeamColor()).getChatColor() + "" + ChatColor.BOLD : ""));
                 team.setSuffix(" " + suffix);
                 team.addEntry(gamePlayer.getName());
+                team.setNameTagVisibility(NameTagVisibility.ALWAYS);
+            }
+            if (Assassin.skill.contains(gamePlayer)) {
+                team.setNameTagVisibility(NameTagVisibility.NEVER);
+            }else {
                 team.setNameTagVisibility(NameTagVisibility.ALWAYS);
             }
         }

@@ -19,10 +19,6 @@ public class AssassinTimer implements Runnable {
             for (GamePlayer rec : GamePlayer.getOnlinePlayers()) {
                 if (Assassin.skill.contains(online) && Assassin.AssassinNameTag.containsKey(online)) {
                     PlayerUtils.hideArmor(online.getPlayer(), rec.getPlayer());
-                    online.getPlayer().hidePlayer(online.getPlayer());
-                } else {
-                    PlayerUtils.showArmor(online.getPlayer(), rec.getPlayer());
-                    online.getPlayer().showPlayer(online.getPlayer());
                 }
             }
         }
