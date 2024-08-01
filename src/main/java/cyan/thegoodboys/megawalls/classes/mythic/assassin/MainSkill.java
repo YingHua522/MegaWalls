@@ -108,7 +108,7 @@ public class MainSkill extends Skill {
 
         new BukkitRunnable() {
             public void run() {
-                if (Assassin.skillTimer.getOrDefault(gamePlayer, 0) == 0) {
+                if (Assassin.skillTimer.getOrDefault(gamePlayer, 0) ==0) {
                     Assassin.skill.remove(gamePlayer);
                     Assassin.AssassinNameTag.remove(gamePlayer);
                     Bukkit.getScheduler().runTaskLater(MegaWalls.getInstance(), game::registerScoreboardTeams, 30L);

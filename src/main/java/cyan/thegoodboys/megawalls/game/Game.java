@@ -261,7 +261,7 @@ public class Game {
             if (gamePlayer != null) {
                 gameTeam = gamePlayer.getGameTeam();
             }
-            String name = (gameTeam != null ? gameTeam.getTeamColor().getText() : "S") + player1.getName();
+            String name = (gameTeam != null ? gameTeam.getTeamColor().getText():"S") + player1.getName();
             if (player.getScoreboard().getTeam(name) != null) {
                 player.getScoreboard().getTeam(name).unregister();
             }
